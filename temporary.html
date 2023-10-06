@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div id="text-to-speech">
+        <style>
+          
+          
+          #speak-button {
+            padding: 10px;
+            font-size: 18px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+          }
+        </style>
+        
+        <center><p id="speak-button">🎧</p></center>
+        <script>
+          let speakButton = document.getElementById("speak-button");
+          speakButton.addEventListener("click", function() {
+            let utterance = new SpeechSynthesisUtterance();
+            utterance.text = `Welcome To Code Crafters.
+                              Learning Never Ends.
+                              Lets Make Digitalize Your Learning !
+                              Here You Find The All New Spell Crafters & Dictionary Crafters
+                              Update Your Vocabulary With Errorless Appropriate Meaning By Dictionary Crafters !
+                              Make Your Spelling Frequent & Mistakeless By Spelling Crafters!
+                              Try It Now`;
+            utterance.voice = window.speechSynthesis.getVoices()[0];
+            window.speechSynthesis.speak(utterance);
+          });
+        </script>
+      </div>
+      
+</body>
+</html>
